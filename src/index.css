@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-stone-50
+}
+
+.fullscreen-enter {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+.fullscreen-enter-active {
+    opacity: 1;
+}
+.fullscreen-exit {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+.fullscreen-exit-active {
+    opacity: 0;
+}
