@@ -1,6 +1,7 @@
 import Card from './Card.tsx';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import { fromEvent, throttleTime } from 'rxjs';
+import { MasonryElement } from '../images.ts';
 
 const getColumns = (n: number): number[] =>
   Array.from({length: n}, (_, i) => i);
@@ -17,7 +18,7 @@ const calculateColumnsCount = () => {
 
 type Props = {
   setFullscreenImageUrl: Dispatch<SetStateAction<string | null>>,
-  imageUrls: string[]
+  imageUrls: MasonryElement[]
 };
 
 const Masonry = ({setFullscreenImageUrl, imageUrls}: Props) => {

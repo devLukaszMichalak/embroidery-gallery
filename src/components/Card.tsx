@@ -17,7 +17,7 @@ const Card = ({ imageUrl, setFullscreenImageUrl }: Props) => {
   return (
     <div className="size-full drop-shadow-xl hover:scale-105 transition-all duration-300 overflow-clip border rounded-md">
       {loading ? (
-        <div className="animate-pulse w-full text-xs h-full min-h-96 flex items-center justify-center bg-stone-200"></div>
+        <div className="animate-pulse w-full text-xs h-full min-h-80 flex items-center justify-center bg-stone-200"></div>
       ) : (
         <img
           onClick={() => setFullscreenImageUrl(imageUrl)}

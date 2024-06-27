@@ -1,0 +1,43 @@
+version: 2.1
+
+jobs:
+  build_and_deploy:
+    docker:
+      - image: oven/bun:1.1.17
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore cache
+          keys:
+            - bun-deps-{{ checksum "bun.lockb" }}
+            - bun-deps-
+      - run:
+          name: Install dependencies
+          command: bun i
+      - run:
+          name: Build project
+          command: bun run build
+      - run:
+          name: Make keys file
+          command: echo ${KEYS} > keys.json
+      - run:
+          name: Deploy to Firebase Hosting
+          command: |
+            sudo bun i --global -g firebase-tools
+            firebase deploy --only hosting
+          environment:
+            GOOGLE_APPLICATION_CREDENTIALS: "keys.json"
+      - save_cache:
+          name: Save cache
+          key: v1-bun-deps-{{ checksum "bun.lockb" }}
+          paths:
+            - ~/.bun/install/cache
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - build_and_deploy:
+          filters:
+            branches:
+              only: main
