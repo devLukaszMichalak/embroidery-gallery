@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Deploy to Firebase Hosting
           command: |
-            bun i --global -g firebase-tools
+            bun i --global firebase-tools
             firebase deploy --only hosting
           environment:
             GOOGLE_APPLICATION_CREDENTIALS: "keys.json"
