@@ -27,7 +27,6 @@ const Masonry = ({setFullscreenImageUrl, imageUrls}: Props) => {
   const previousColumnsCount = useRef(columnsCount);
   
   useEffect(() => {
-    
     const handleResize = () => {
       const newColumnsCount = calculateColumnsCount();
       

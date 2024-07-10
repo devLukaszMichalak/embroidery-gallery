@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    @apply bg-stone-50
+    @apply bg-stone-200;
 }
 
 .fullscreen-enter {

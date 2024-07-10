@@ -18,6 +18,9 @@ jobs:
           name: Install dependencies
           command: bun i
       - run:
+          name: Lint
+          command: bun lint
+      - run:
           name: Build project
           command: bun run build
       - run:
