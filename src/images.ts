@@ -12,10 +12,10 @@ export const imageUrls: MasonryElement[] = [
   'krolikowskich.jpg',
   'martyny.jpg',
   'martyny-blisko.jpg',
-  'owoce.jpg',
+//  'owoce.jpg',
   'owoce-kokarda.jpg',
   'cyndaquil.jpg',
-  'cyndaquil-otoczony.jpg'
+//  'cyndaquil-otoczony.jpg'
 ].map(element => `./assets/${element}`);
 
 export type MasonryElement = string
