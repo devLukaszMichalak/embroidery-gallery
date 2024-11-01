@@ -6,7 +6,7 @@ import { MasonryElement } from '../images.ts';
 const getColumns = (n: number): number[] =>
   Array.from({length: n}, (_, i) => i);
 
-const calculateColumnsCount = () => {
+const calculateColumnsCount = (): 4 | 3 | 2 => {
   if (window.innerWidth >= 1140) {
     return 4;
   } else if (window.innerWidth >= 768) {
