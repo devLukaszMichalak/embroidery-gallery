@@ -1,4 +1,5 @@
 export const imageUrls: MasonryElement[] = [
+  'kwiatek-kontur.jpg',
   'alicja.jpg',
   'cecylia.jpg',
   'cecylia-blisko.jpg',
@@ -14,7 +15,8 @@ export const imageUrls: MasonryElement[] = [
   'martyny-blisko.jpg',
 //  'owoce.jpg',
   'owoce-kokarda.jpg',
-  'cyndaquil.jpg',
+  'cyndaquil-new.jpg',
+//  'cyndaquil.jpg',
 //  'cyndaquil-otoczony.jpg'
 ].map(element => `./assets/${element}`);
 
