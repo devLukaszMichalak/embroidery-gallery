@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { type MasonryElement } from '../images.ts';
 
 type Props = {
-  imageUrl: string,
+  imageUrl: MasonryElement,
   setFullscreenImageUrl: Dispatch<SetStateAction<string | null>>,
 }
 

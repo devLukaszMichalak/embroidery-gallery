@@ -1,4 +1,4 @@
-export const imageUrls: MasonryElement[] = [
+const imageNames = [
   'kwiatek-kontur.jpg',
   'alicja.jpg',
   'cecylia.jpg',
@@ -18,6 +18,9 @@ export const imageUrls: MasonryElement[] = [
   'cyndaquil-new.jpg',
 //  'cyndaquil.jpg',
 //  'cyndaquil-otoczony.jpg'
-].map(element => `./assets/${element}`);
+] as const;
 
-export type MasonryElement = string
+export const imageUrls: MasonryElement[] = imageNames
+  .map((element: typeof imageNames[number]): MasonryElement => `./assets/${element}`);
+
+export type MasonryElement = `./assets/${typeof imageNames[number]}`;
