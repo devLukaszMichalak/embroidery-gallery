@@ -56,8 +56,8 @@ const Masonry = ({setFullscreenImageUrl, imageUrls}: Props) => {
           <div key={column} className="size-full flex flex-col gap-5">
             {imageUrls
               .filter(separateColumnImages(column))
-              .map((imageUrl, i) =>
-                <Card setFullscreenImageUrl={setFullscreenImageUrl} key={`${column}-${i}`} imageUrl={imageUrl}/>)}
+              .map((imageUrl) =>
+                <Card setFullscreenImageUrl={setFullscreenImageUrl} key={imageUrl} imageUrl={imageUrl}/>)}
           </div>
         ))
       }
